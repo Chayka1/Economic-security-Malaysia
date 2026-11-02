@@ -45,12 +45,12 @@ const fmt = (v, d = 2) => (v === null || v === undefined ? "–" : v.toFixed(d).
 
 // ---------- рівні економічної безпеки ----------
 const LEVELS = {
-  opt: { name: "Оптимальний", color: "#0ca30c" },
-  sat: { name: "Задовільний", color: "#5aa65a" },
-  uns: { name: "Незадовільний", color: "#e0a419" },
-  dan: { name: "Небезпечний", color: "#e07a45" },
-  cri: { name: "Критичний", color: "#d03b3b" },
-  abs: { name: "Абсолютна небезпека", color: "#8f1f1f" },
+  opt: { name: "Оптимальний", color: "#30d158" },
+  sat: { name: "Задовільний", color: "#7cc47f" },
+  uns: { name: "Незадовільний", color: "#e8b923" },
+  dan: { name: "Небезпечний", color: "#ff8a3d" },
+  cri: { name: "Критичний", color: "#ff453a" },
+  abs: { name: "Абсолютна небезпека", color: "#b3261e" },
 };
 const chip = key => `<span class="chip lv-${key}">${LEVELS[key].name}</span>`;
 
@@ -248,7 +248,7 @@ function drawCharts() {
     return;
   }
   Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, 'Helvetica Neue', Arial, sans-serif";
-  Chart.defaults.color = "#52514e";
+  Chart.defaults.color = "#8e8e93";
 
   // Плагін: кольорові зони порогових значень + підписи рівнів
   const bandsPlugin = {
@@ -260,7 +260,7 @@ function drawCharts() {
       opts.bands.forEach(([lo, hi, lv]) => {
         const top = y.getPixelForValue(Math.min(hi, y.max)), bot = y.getPixelForValue(Math.max(lo, y.min));
         if (bot <= top) return;
-        ctx.fillStyle = LEVELS[lv].color + "22";
+        ctx.fillStyle = LEVELS[lv].color + "26";
         ctx.fillRect(a.left, top, a.right - a.left, bot - top);
         if (bot - top > 14) {
           ctx.fillStyle = LEVELS[lv].color;
@@ -273,16 +273,16 @@ function drawCharts() {
     },
   };
 
-  const COLORS = ["#2a78d6", "#eb6834"];
+  const COLORS = ["#409cff", "#ff9f45"];
   INDICATORS.forEach(ind => {
     const datasets = ind.series.map((s, i) => ({
       label: s.name, data: s.data, borderColor: COLORS[i], backgroundColor: COLORS[i],
-      borderWidth: 2.5, pointRadius: 3.5, pointHoverRadius: 7, pointBorderColor: "#fff", pointBorderWidth: 1.5,
+      borderWidth: 2.5, pointRadius: 3.5, pointHoverRadius: 7, pointBorderColor: "#1c1c1e", pointBorderWidth: 1.5,
       tension: 0, spanGaps: true,
     }));
     if (ind.series.length === 1) {
       const a = avg(ind.series[0].data);
-      datasets.push({ label: `Середнє: ${fmt(a, ind.d)}`, data: YEARS.map(() => a), borderColor: "#52514e", borderDash: [6, 5], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 });
+      datasets.push({ label: `Середнє: ${fmt(a, ind.d)}`, data: YEARS.map(() => a), borderColor: "#aeaeb2", borderDash: [6, 5], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 });
     }
     new Chart(document.getElementById("ch-" + ind.id), {
       type: "line",
@@ -292,14 +292,14 @@ function drawCharts() {
         responsive: true, maintainAspectRatio: false,
         interaction: { mode: "index", intersect: false },
         scales: {
-          y: { min: ind.yMin, max: ind.yMax, grid: { color: "rgba(0,0,0,.06)" }, border: { display: false }, ticks: { callback: v => String(+v.toFixed(3)).replace(".", ",") } },
+          y: { min: ind.yMin, max: ind.yMax, grid: { color: "rgba(255,255,255,.07)" }, border: { display: false }, ticks: { callback: v => String(+v.toFixed(3)).replace(".", ",") } },
           x: { grid: { display: false } },
         },
         plugins: {
           bands: { bands: ind.bands },
           legend: { position: "bottom", labels: { usePointStyle: true, boxWidth: 8, padding: 14 } },
           tooltip: {
-            backgroundColor: "rgba(29,29,31,.92)", padding: 12, cornerRadius: 10,
+            backgroundColor: "rgba(44,44,46,.96)", padding: 12, cornerRadius: 10,
             filter: item => item.raw !== null,
             callbacks: {
               label: c => {
