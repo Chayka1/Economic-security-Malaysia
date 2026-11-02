@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Економічна безпека Малайзії — аналіз 2015–2024</title>
+  <meta name="description" content="Аналіз економічної безпеки Малайзії за 2015–2024 рр.: показники, порогові значення, тенденції, загрози, висновки.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="index.html">Економічна безпека <span>Малайзії</span></a>
+      <button class="burger" aria-label="Меню" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="analysis.html" class="active">Аналіз: Малайзія</a></li>
+        <li><a href="index.html#contacts">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Аналітична сторінка · 2015–2024 рр.</div>
+      <h1>Економічна безпека Малайзії</h1>
+      <p class="lead">Оцінювання рівня економічної безпеки Малайзії за дев'ятьма показниками шести складових на основі даних World Bank (World Development Indicators). Рівень визначено за середнім значенням показника за 2015–2024 рр. відповідно до порогових значень.</p>
+      <div class="verdict">Загальна оцінка: <b>незадовільний (помірний) рівень економічної безпеки</b></div>
+      <nav class="toc" aria-label="Зміст">
+        <a href="#summary">Зведена таблиця</a>
+        <a href="#indicators">Показники</a>
+        <a href="#trends">Тенденції</a>
+        <a href="#threats">Загрози</a>
+        <a href="#conclusion">Висновок</a>
+        <a href="#sources">Джерела</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- KPI -->
+    <section style="padding:0 0 8px">
+      <div class="container">
+        <div class="grid-4">
+          <div class="kpi reveal"><div class="num">9</div><div class="lbl">показників оцінено</div></div>
+          <div class="kpi good reveal"><div class="num">3</div><div class="lbl">на оптимальному або задовільному рівні (33,3 %)</div></div>
+          <div class="kpi warn reveal"><div class="num">4</div><div class="lbl">на незадовільному або небезпечному рівні (44,4 %)</div></div>
+          <div class="kpi bad reveal"><div class="num">2</div><div class="lbl">на критичному рівні або рівні абсолютної небезпеки (22,2 %)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ключові показники та порівняння з пороговими значеннями</h2>
+          <p>Таблиця містить середнє фактичне значення кожного показника за 2015–2024 рр., інтервал порогових значень, у який воно потрапляє, рівень економічної безпеки та напрям зміни.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table id="summaryTable">
+            <thead>
+              <tr>
+                <th>№</th><th>Складова</th><th>Показник</th><th class="num">Середнє 2015–2024</th><th>Одиниця</th><th>Інтервал</th><th>Рівень безпеки</th><th>Тенденція</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="card reveal" style="margin-top:20px">
+          <h3>Розподіл показників за рівнями економічної безпеки</h3>
+          <div class="dist-bar" id="distBar"></div>
+          <div class="legend" id="distLegend"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDICATORS -->
+    <section class="alt" id="indicators">
+      <div class="container">
+        <div class="section-head">
+          <h2>Аналіз показників</h2>
+          <p>На кожному графіку кольоровими зонами показано порогові інтервали рівнів економічної безпеки, пунктиром — середнє значення за період. Наведіть курсор на точку, щоб побачити значення.</p>
+        </div>
+        <div id="indicatorList"></div>
+      </div>
+    </section>
+
+    <!-- TRENDS -->
+    <section id="trends">
+      <div class="container">
+        <div class="section-head"><h2>Безпечні та небезпечні тенденції</h2></div>
+        <div class="grid-2">
+          <div class="card tendency good reveal">
+            <h3>✅ Безпечні тенденції</h3>
+            <ul>
+              <li>Зростання очікуваної тривалості життя жінок (78,03 → 79,52 року) і чоловіків (72,90 → 74,45 року) з повним відновленням після спаду 2021 р.</li>
+              <li>Стабільне перевищення експорту над імпортом: коефіцієнт покриття всі 10 років перебував в оптимальному інтервалі [1; 1,2].</li>
+              <li>Незначне зменшення нерівності доходів (13,61 → 13,43 раза).</li>
+            </ul>
+          </div>
+          <div class="card tendency bad reveal">
+            <h3>⚠️ Небезпечні тенденції</h3>
+            <ul>
+              <li>Зростання державного боргу з 53,57 % до 64,57 % ВВП; з 2020 р. — зона абсолютної небезпеки.</li>
+              <li>Скорочення витрат на дослідження та розробки з 1,415 % (2016 р.) до ≈1 % ВВП.</li>
+              <li>Зниження урожайності зернових з 40,22 до 35,44 ц/га — наближення до межі незадовільного рівня.</li>
+              <li>Повільне зростання смертності немовлят (дівчатка 6,0 → 6,3; хлопчики 7,2 → 7,6 на 1000).</li>
+              <li>Зниження коефіцієнта покриття імпорту експортом після 2019 р. (1,130 → 1,081).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREATS -->
+    <section class="alt" id="threats">
+      <div class="container">
+        <div class="section-head">
+          <h2>Основні загрози економічній безпеці</h2>
+          <p>Загрози виокремлено на основі показників, що перебувають у небезпечних зонах або мають несприятливу динаміку.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card threat reveal"><div class="n">1</div><div><h3>Зростання державного боргу</h3><p>Борг центрального уряду зріс до 64,57 % ВВП. Наслідки: зростання витрат на обслуговування боргу, менше ресурсів для державних інвестицій, вразливість до підвищення ставок.</p><div class="tags">Фінансова складова</div></div></article>
+          <article class="card threat reveal"><div class="n">2</div><div><h3>Висока нерівність доходів</h3><p>Доходи 10 % найбагатших у 13,5 раза перевищують доходи 10 % найбідніших. Наслідки: соціальна напруженість, обмеження внутрішнього попиту, нерівний доступ до освіти та медицини.</p><div class="tags">Соціальна складова</div></div></article>
+          <article class="card threat reveal"><div class="n">3</div><div><h3>Недостатнє фінансування науки</h3><p>Витрати на НДДКР скоротилися до ≈1 % ВВП. Наслідки: технологічне відставання, залежність від іноземних технологій, ризик «пастки середнього доходу».</p><div class="tags">Інвестиційно-інноваційна складова</div></div></article>
+          <article class="card threat reveal"><div class="n">4</div><div><h3>Зниження урожайності зернових</h3><p>Урожайність знизилася на 12 % за 10 років. Наслідки: зростання залежності від імпорту рису та продовольства, вразливість до світових цінових шоків.</p><div class="tags">Виробнича та продовольча складові</div></div></article>
+          <article class="card threat reveal"><div class="n">5</div><div><h3>Проблеми охорони здоров'я матерів і дітей</h3><p>Смертність немовлят не знижується, а тривалість життя чоловіків нижча за безпечний поріг. Наслідки: втрати людського капіталу.</p><div class="tags">Демографічна складова</div></div></article>
+          <article class="card threat reveal"><div class="n">6</div><div><h3>Залежність від зовнішніх ринків</h3><p>Експорт становить 62–77 % ВВП. Наслідки: вразливість до світових криз і падіння попиту, як у 2020 р.</p><div class="tags">Зовнішньоекономічна складова</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section id="conclusion">
+      <div class="container">
+        <div class="conclusion reveal">
+          <h2>Узагальнений аналітичний висновок</h2>
+          <p>Аналіз дев'яти показників шести складових економічної безпеки Малайзії за 2015–2024 рр. показав, що загальний рівень економічної безпеки країни є <b>незадовільним (помірним)</b>: лише 33,3 % показників перебувають на оптимальному або задовільному рівні, тоді як 22,2 % — на критичному рівні або рівні абсолютної небезпеки.</p>
+          <p><b>Сильні сторони:</b> зовнішньоекономічна стабільність (коефіцієнт покриття імпорту експортом 1,107 — оптимальний рівень), висока тривалість життя жінок (78,40 року — оптимальний рівень) та задовільна урожайність зернових (37,10 ц/га).</p>
+          <p><b>Найбільш проблемні складові:</b> соціальна (співвідношення доходів 13,54 раза — абсолютна небезпека) та фінансова (державний борг 57,34 % ВВП — критичний рівень, з 2020 р. понад 60 % ВВП). Небезпечний рівень мають витрати на НДДКР (1,14 % ВВП) і смертність немовлят серед хлопчиків (7,4 на 1000).</p>
+          <p>Пріоритетні напрями зміцнення економічної безпеки: стабілізація державного боргу, нарощування витрат на науку й інновації, зменшення нерівності доходів, підтримка сільського господарства та розвиток охорони материнства і дитинства.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="sources" style="padding-top:0">
+      <div class="container">
+        <div class="card reveal">
+          <h3>Джерела даних</h3>
+          <ul id="sourceList" style="padding-left:18px;color:var(--ink-2);font-size:.92rem"></ul>
+          <p class="src">Дані отримано з World Bank, World Development Indicators, станом на 02.11.2026. Порогові значення — методичні матеріали дисципліни «ІТуЕБД».</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span class="year">2026</span> Чайка Максим Володимирович. Усі права захищено.</span>
+      <span>ДТЕУ · ФІТ 2-7м · Іспит з ІТуЕБД</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
