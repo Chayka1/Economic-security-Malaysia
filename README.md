@@ -3,7 +3,7 @@
 Вебсайт з аналізом економічної безпеки **Малайзії** за 2015–2024 рр. Виконано як практичну частину іспиту з дисципліни «Інформаційні технології у системі забезпечення економічної безпеки держави» (ДТЕУ).
 
 **Автор:** Чайка Максим Володимирович, група ФІТ 2-7м
-**Сайт:** `https://<логін>.github.io/economic-security-malaysia/`
+**Сайт:** [chayka1.github.io/Economic-security-Malaysia](https://chayka1.github.io/Economic-security-Malaysia/)
 
 ---
 
@@ -19,7 +19,7 @@
 ## Структура репозиторію
 
 ```
-economic-security-malaysia/
+Economic-security-Malaysia/
 ├── index.html      головна сторінка (про автора)
 ├── analysis.html   аналітична сторінка
 ├── style.css       стилі: мінімалістичний дизайн, адаптивна верстка
@@ -74,10 +74,10 @@ avg()  = середнє значення за роки з даними (null н�
 Для графіків потрібен Інтернет, бо Chart.js завантажується з CDN.
 
 ## Як опублікувати на GitHub Pages
-1. Створіть публічний репозиторій `economic-security-malaysia`.
+1. Створіть публічний репозиторій `Economic-security-Malaysia`.
 2. **Add file → Upload files**: перетягніть `index.html`, `analysis.html`, `style.css`, `script.js`, `README.md` і натисніть **Commit changes**.
 3. **Settings → Pages → Build and deployment**: Source — *Deploy from a branch*, Branch — `main`, папка `/ (root)`, потім **Save**.
-4. Через 1–2 хвилини сайт буде доступний за адресою `https://<логін>.github.io/economic-security-malaysia/`.
+4. Через 1–2 хвилини сайт буде доступний за адресою [chayka1.github.io/Economic-security-Malaysia](https://chayka1.github.io/Economic-security-Malaysia/).
 
 ## Як оновити дані
 1. Завантажте нові значення з [data.worldbank.org](https://data.worldbank.org/) (Download → CSV/Excel).
